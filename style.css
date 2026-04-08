@@ -2,19 +2,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #0f0f0f;
+    color: #f5f5f5;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: aquamarine;
+    background: rgba(20, 20, 20, 0.9);
     padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
 }
 
-nav .logo {
-    color: #003333;
+.logo {
+    color: #ffffff;
+    letter-spacing: 2px;
 }
 
 nav ul {
@@ -28,47 +37,88 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #003333;
-    font-weight: bold;
+    color: #cccccc;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: white;
+    color: #ffffff;
 }
 
 .hero {
     height: 90vh;
-    background: linear-gradient(to right, skyblue, aquamarine);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #003333;
+    background: linear-gradient(145deg, #111, #1f1f1f);
     text-align: center;
 }
 
-.hero span {
-    color: white;
+.hero h1 {
+    font-size: 45px;
+}
+
+.hero p {
+    margin-top: 10px;
+    color: #aaa;
 }
 
 .hero button {
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 10px 25px;
     border: none;
-    background: #003333;
-    color: white;
+    background: white;
+    color: black;
+    border-radius: 25px;
     cursor: pointer;
-    border-radius: 20px;
+    transition: 0.3s;
 }
 
 .hero button:hover {
-    background: white;
-    color: #003333;
+    background: #ccc;
 }
 
-section {
+.about-page {
     padding: 60px;
     text-align: center;
+}
+
+.intro {
+    max-width: 800px;
+    margin: 20px auto;
+    color: #bbb;
+}
+
+.box {
+    background: #1a1a1a;
+    margin: 20px auto;
+    padding: 25px;
+    width: 75%;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.05);
+    text-align: left;
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(255,255,255,0.1);
+}
+
+.box h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.box p, .box li {
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.box ul {
+    padding-left: 20px;
 }
 
 .project-container {
@@ -78,21 +128,66 @@ section {
 }
 
 .card {
-    background: skyblue;
+    background: #1a1a1a;
     margin: 15px;
     padding: 20px;
     width: 250px;
     border-radius: 15px;
     transition: 0.3s;
+    text-align: center;
 }
 
 .card:hover {
     transform: scale(1.05);
-    background: aquamarine;
+    background: #2a2a2a;
+}
+
+.contact-page {
+    padding: 60px;
+    text-align: center;
+}
+
+input, textarea {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    background: #2a2a2a;
+    color: white;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background: white;
+    color: black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ccc;
 }
 
 footer {
-    background: aquamarine;
-    padding: 15px;
+    background: #111;
     text-align: center;
+    padding: 15px;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .box {
+        width: 90%;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
 }
