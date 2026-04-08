@@ -1,25 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiyam Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-    <h2 class="logo">Shiyam Ravikumar</h2>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+    <nav>
+        <div class="logo">Shiyam R.</div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-<section class="hero">
-    <h1>Hello, I'm Shiyam</h1>
-    <p>Front-End Developer creating modern websites</p>
-</section>
+    <section class="hero" id="home">
+        <h1>Hi, I'm Shiyam</h1>
+        <p class="typed-text"></p>
+        <button onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">About Me</button>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="cards">
+            <div class="box">Web Development</div>
+            <div class="box">UI/UX Design</div>
+            <div class="box">Data Analysis</div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-form">
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button>Send Message</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Shiyam R. | 
+            <a href="#">GitHub</a> | 
+            <a href="#">LinkedIn</a>
+        </p>
+    </footer>
+
+    <script>
+        const phrases = ["I build websites.", "I create experiences.", "I solve problems."];
+        const typedText = document.querySelector(".typed-text");
+        let i = 0, j = 0, currentPhrase = [], isDeleting = false;
+
+        function type() {
+            if(i < phrases.length) {
+                if(!isDeleting && j <= phrases[i].length){
+                    currentPhrase = phrases[i].slice(0,j++);
+                    typedText.textContent = currentPhrase;
+                } 
+                if(isDeleting && j >= 0){
+                    currentPhrase = phrases[i].slice(0,j--);
+                    typedText.textContent = currentPhrase;
+                }
+                if(j === phrases[i].length){
+                    isDeleting = true;
+                    setTimeout(type, 1000);
+                    return;
+                }
+                if(j === 0 && isDeleting){
+                    isDeleting = false;
+                    i++;
+                }
+                setTimeout(type, isDeleting ? 50 : 150);
+            } else {
+                i = 0;
+                setTimeout(type, 500);
+            }
+        }
+        type();
+    </script>
 
 </body>
 </html>
