@@ -19,29 +19,10 @@
     </nav>
 
     <section class="hero" id="home">
-        <h1>Hi, I'm Shiyam</h1>
+        <h1>Hi, I'm Shiyam Ravikumar</h1>
         <p class="typed-text"></p>
-        <button onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">About Me</button>
     </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="cards">
-            <div class="box">Web Development</div>
-            <div class="box">UI/UX Design</div>
-            <div class="box">Data Analysis</div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact-form">
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Your Message"></textarea>
-            <button>Send Message</button>
-        </div>
-    </section>
 
     <footer>
         <p>© 2026 Shiyam R. | 
@@ -49,39 +30,6 @@
             <a href="#">LinkedIn</a>
         </p>
     </footer>
-
-    <script>
-        const phrases = ["I build websites.", "I create experiences.", "I solve problems."];
-        const typedText = document.querySelector(".typed-text");
-        let i = 0, j = 0, currentPhrase = [], isDeleting = false;
-
-        function type() {
-            if(i < phrases.length) {
-                if(!isDeleting && j <= phrases[i].length){
-                    currentPhrase = phrases[i].slice(0,j++);
-                    typedText.textContent = currentPhrase;
-                } 
-                if(isDeleting && j >= 0){
-                    currentPhrase = phrases[i].slice(0,j--);
-                    typedText.textContent = currentPhrase;
-                }
-                if(j === phrases[i].length){
-                    isDeleting = true;
-                    setTimeout(type, 1000);
-                    return;
-                }
-                if(j === 0 && isDeleting){
-                    isDeleting = false;
-                    i++;
-                }
-                setTimeout(type, isDeleting ? 50 : 150);
-            } else {
-                i = 0;
-                setTimeout(type, 500);
-            }
-        }
-        type();
-    </script>
 
 </body>
 </html>
