@@ -1,11 +1,10 @@
-/* Body Background */
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(135deg, #e0e0e0, #ffffff, #d6d6d6);
 }
 
-/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -14,7 +13,6 @@ nav {
     backdrop-filter: blur(10px);
 }
 
-/* Logo */
 .logo {
     font-size: 24px;
     color: black;
@@ -23,7 +21,6 @@ nav {
         2px 2px 5px rgba(255,255,255,0.8);
 }
 
-/* Navbar Links */
 nav ul {
     list-style: none;
     display: flex;
@@ -46,7 +43,6 @@ nav ul li a:hover {
     color: grey;
 }
 
-/* Hero Section */
 .hero {
     height: 90vh;
     display: flex;
@@ -55,7 +51,6 @@ nav ul li a:hover {
     align-items: center;
 }
 
-/* Main Heading */
 .hero h1 {
     font-size: 45px;
     color: black;
@@ -64,7 +59,6 @@ nav ul li a:hover {
         0 0 10px rgba(255,255,255,0.9);
 }
 
-/* Paragraph */
 .hero p {
     color: #333;
     margin-top: 10px;
@@ -72,13 +66,11 @@ nav ul li a:hover {
         1px 1px 0 white;
 }
 
-/* Sections */
 section {
     padding: 50px;
     text-align: center;
 }
 
-/* Boxes (About Cards) */
 .box {
     background: linear-gradient(145deg, #f0f0f0, #ffffff);
     margin: 20px auto;
@@ -90,7 +82,6 @@ section {
         -5px -5px 15px #ffffff;
 }
 
-/* Headings */
 h2 {
     color: black;
     text-shadow: 
@@ -98,12 +89,10 @@ h2 {
         0 0 5px rgba(255,255,255,0.8);
 }
 
-/* Text */
 p, li {
     color: #333;
 }
 
-/* Button */
 button {
     padding: 10px 20px;
     border: none;
@@ -118,7 +107,6 @@ button:hover {
     background: grey;
 }
 
-/* Footer */
 footer {
     background: #e0e0e0;
     padding: 15px;
