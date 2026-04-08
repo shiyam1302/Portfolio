@@ -1,31 +1,29 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
-
+/* Body Background */
 body {
-    background: #0f0f0f;
-    color: #f5f5f5;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #e0e0e0, #ffffff, #d6d6d6);
 }
 
+/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background: rgba(20, 20, 20, 0.9);
     padding: 15px 50px;
-    position: sticky;
-    top: 0;
+    background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(10px);
 }
 
+/* Logo */
 .logo {
-    color: #ffffff;
-    letter-spacing: 2px;
+    font-size: 24px;
+    color: black;
+    text-shadow: 
+        1px 1px 0 white,
+        2px 2px 5px rgba(255,255,255,0.8);
 }
 
+/* Navbar Links */
 nav ul {
     list-style: none;
     display: flex;
@@ -37,157 +35,93 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #cccccc;
-    font-weight: 500;
-    transition: 0.3s;
+    color: black;
+    font-weight: bold;
+    text-shadow: 
+        1px 1px 0 white,
+        0 0 5px rgba(255,255,255,0.7);
 }
 
 nav ul li a:hover {
-    color: #ffffff;
+    color: grey;
 }
 
+/* Hero Section */
 .hero {
     height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(145deg, #111, #1f1f1f);
-    text-align: center;
 }
 
+/* Main Heading */
 .hero h1 {
     font-size: 45px;
-}
-
-.hero p {
-    margin-top: 10px;
-    color: #aaa;
-}
-
-.hero button {
-    margin-top: 20px;
-    padding: 10px 25px;
-    border: none;
-    background: white;
     color: black;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: 0.3s;
+    text-shadow: 
+        2px 2px 0 white,
+        0 0 10px rgba(255,255,255,0.9);
 }
 
-.hero button:hover {
-    background: #ccc;
+/* Paragraph */
+.hero p {
+    color: #333;
+    margin-top: 10px;
+    text-shadow: 
+        1px 1px 0 white;
 }
 
-.about-page {
-    padding: 60px;
+/* Sections */
+section {
+    padding: 50px;
     text-align: center;
 }
 
-.intro {
-    max-width: 800px;
-    margin: 20px auto;
-    color: #bbb;
-}
-
+/* Boxes (About Cards) */
 .box {
-    background: #1a1a1a;
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
     margin: 20px auto;
     padding: 25px;
     width: 75%;
     border-radius: 15px;
-    box-shadow: 0 0 15px rgba(255,255,255,0.05);
-    text-align: left;
-    transition: 0.3s;
+    box-shadow: 
+        5px 5px 15px #cfcfcf,
+        -5px -5px 15px #ffffff;
 }
 
-.box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 25px rgba(255,255,255,0.1);
+/* Headings */
+h2 {
+    color: black;
+    text-shadow: 
+        1px 1px 0 white,
+        0 0 5px rgba(255,255,255,0.8);
 }
 
-.box h2 {
-    color: #ffffff;
-    margin-bottom: 10px;
+/* Text */
+p, li {
+    color: #333;
 }
 
-.box p, .box li {
-    color: #cccccc;
-    line-height: 1.6;
-}
-
-.box ul {
-    padding-left: 20px;
-}
-
-.project-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.card {
-    background: #1a1a1a;
-    margin: 15px;
-    padding: 20px;
-    width: 250px;
-    border-radius: 15px;
-    transition: 0.3s;
-    text-align: center;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    background: #2a2a2a;
-}
-
-.contact-page {
-    padding: 60px;
-    text-align: center;
-}
-
-input, textarea {
-    width: 300px;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    margin-top: 10px;
-    background: #2a2a2a;
-    color: white;
-}
-
+/* Button */
 button {
-    margin-top: 15px;
     padding: 10px 20px;
     border: none;
-    background: white;
-    color: black;
+    background: black;
+    color: white;
     border-radius: 20px;
+    margin-top: 15px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #ccc;
+    background: grey;
 }
 
+/* Footer */
 footer {
-    background: #111;
-    text-align: center;
+    background: #e0e0e0;
     padding: 15px;
-    color: #aaa;
-}
-
-@media (max-width: 768px) {
-    .box {
-        width: 90%;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-
-    nav ul {
-        margin-top: 10px;
-    }
+    text-align: center;
+    color: black;
 }
