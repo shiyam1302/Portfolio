@@ -36,6 +36,21 @@
 <footer>
     <p>© 2026 Shiyam Ravikumar</p>
 </footer>
+    <script>
+        // Simple Particle Generator
+        const container = document.getElementById('particles');
+        for (let i = 0; i < 50; i++) {
+            const p = document.createElement('div');
+            p.className = 'particle';
+            p.style.left = Math.random() * 100 + '%';
+            p.style.top = Math.random() * 100 + '%';
+            p.style.width = p.style.height = Math.random() * 5 + 'px';
+            p.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            p.style.animationDelay = (Math.random() * 5) + 's';
+            container.appendChild(p);
+        }
+    </script>
 
 </body>
 </html>
+
