@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Contact</title>
+    <title>Contact - Shiyam</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
-    <h2 class="logo">Shiyam Ravikumar</h2>
+    <div class="logo">Shiyam Ravikumar</div>
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
 </nav>
 
-<section class="contact-page">
-    <h2>Contact Me</h2>
-    <p>Feel free to reach out for work or collaboration.</p>
+<section>
 
-    <p><strong>Email:</strong> rshiyammeena@gmail.com</p>
+<h1>Contact Me</h1>
 
-    <form>
-        <input type="text" placeholder="Your Name" required><br><br>
-        <input type="email" placeholder="Your Email" required><br><br>
-        <textarea placeholder="Your Message" required></textarea><br><br>
-        <button type="submit">Send Message</button>
-    </form>
+<form action="contact.php" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+
+<p>Email: rshiyammeena@gmail.com</p>
+
 </section>
 
 </body>
