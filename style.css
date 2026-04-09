@@ -15,35 +15,23 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    padding: 15px 40px;
     border-bottom: 1px solid #444;
 }
 
 /* LOGO */
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
 .logo {
-    width: 85px;
-    height: 85px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
+    border: 2px solid #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    font-weight: bold;
     color: #fff;
-    border: 3px solid #fff;
+    font-weight: bold;
 
-    box-shadow: 0 0 10px #aaa, 0 0 25px #555;
-}
-
-.logo-text {
-    font-size: 20px;
-    color: #ccc;
+    box-shadow: 0 0 10px #aaa, 0 0 20px #555;
 }
 
 /* NAV LINKS */
@@ -53,12 +41,12 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 30px;
+    margin-left: 25px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #aaa;
+    color: #ccc;
     transition: 0.3s;
 }
 
@@ -72,51 +60,31 @@ nav ul li a.active {
 .hero {
     height: 90vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-.left h1 {
+.hero h1 {
     font-size: 40px;
+    text-shadow: 0 0 15px #fff;
 }
 
-.left span {
-    text-shadow: 0 0 10px #fff;
-}
-
-.left h2 {
-    color: #aaa;
+.hero h2 {
     margin-top: 10px;
+    color: #aaa;
 }
 
-.left p {
+.intro {
     margin-top: 20px;
+    max-width: 600px;
+    text-align: center;
     color: #ccc;
-    max-width: 500px;
 }
 
-/* BUTTON */
-button {
+.trust {
     margin-top: 20px;
-    padding: 10px 20px;
-    border: 1px solid #fff;
-    background: transparent;
-    color: #fff;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #fff;
-    color: #000;
-}
-
-/* CIRCLE */
-.glow-circle {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    background: radial-gradient(circle, #444, #000);
-    box-shadow: 0 0 40px #333;
+    color: #ddd;
 }
 
 /* SECTION */
@@ -124,25 +92,14 @@ section {
     padding: 50px;
 }
 
-p, li {
-    color: #ccc;
-}
-
-/* PROJECTS */
-.projects {
-    display: flex;
-    gap: 20px;
-}
-
-.card {
+/* BOX */
+.box {
     background: #111;
     padding: 20px;
+    margin-top: 20px;
     border-radius: 10px;
     border: 1px solid #444;
-}
-
-.card:hover {
-    box-shadow: 0 0 15px #777;
+    box-shadow: 0 0 10px #333;
 }
 
 /* FORM */
@@ -153,4 +110,27 @@ input, textarea {
     background: #111;
     border: 1px solid #555;
     color: #fff;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #000;
+}
+
+button:hover {
+    box-shadow: 0 0 15px #fff;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    color: #aaa;
 }
