@@ -1,56 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Home</title>
-<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
-<nav>
-    <div class="logo">SR</div>
-    <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-
+<header>
+    <nav>
+        <a href="index.html">Introduction</a>
+        <a href="about.html">Qualifications</a>
+        <a href="projects.html">Work Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 <section class="hero">
-    <h1>Hi, I'm Shiyam Ravikumar</h1>
-    <h2>Web Developer</h2>
+    
+    <div class="hero-title">
+            <h2>WELCOME TO MY PORTFOLIO</h2>
+    </div>
 
-    <p class="intro">
-        I build responsive, modern, and user-friendly web applications 
-        with a strong focus on performance and clean design.
-    </p>
+    <div class="hero-box">
 
-    <p class="trust">
-        ✔ Reliable & Detail-Oriented <br>
-        ✔ Quick Learner <br>
-        ✔ Ready for Real-Time Projects <br>
-        ✔ Focused on Quality Delivery
-    </p>
+        <div class="hero-left">
+            <img src="SR.png" alt="SR">
+        </div>
+
+        <div class="hero-right">
+            <h1>SHIYAM RAVIKUMAR</h1>
+
+            <p class="role">
+                Electrical Engineer | Web Developer
+            </p>
+
+            <p class="intro-text">
+                A disciplined and detail-oriented fresher with strong knowledge in Electrical Engineering and modern web development.
+                Focused on delivering clean, efficient, and timely solutions with professional standards.
+            </p>
+
+            <p class="trust-line">
+                “Committed to continuous learning, problem-solving, and delivering quality results even as a fresher.”
+            </p>
+        </div>
+
+    </div>
+
 </section>
-
-<footer>
-    <p>© 2026 Shiyam Ravikumar</p>
-</footer>
-    <script>
-        // Simple Particle Generator
-        const container = document.getElementById('particles');
-        for (let i = 0; i < 50; i++) {
-            const p = document.createElement('div');
-            p.className = 'particle';
-            p.style.left = Math.random() * 100 + '%';
-            p.style.top = Math.random() * 100 + '%';
-            p.style.width = p.style.height = Math.random() * 5 + 'px';
-            p.style.animationDuration = (Math.random() * 10 + 10) + 's';
-            p.style.animationDelay = (Math.random() * 5) + 's';
-            container.appendChild(p);
-        }
-    </script>
 
 </body>
 </html>
-
